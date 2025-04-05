@@ -1,7 +1,7 @@
 # Cats App
 
-![demo]()
-[Deployed Project]()
+![demo](https://github.com/user-attachments/assets/4782b16c-0614-44dd-8df9-25b3230c32d5)
+[Deployed Project](https://cats-app-mauve.vercel.app)
 
 ## Introduction
 
@@ -30,6 +30,15 @@ To install and use the project, follow these steps:
 ```sh
   npm install
 ```
+
+4. Obtain an API key from [thecatapi.com](https://thecatapi.com).
+5. Add a .env file in the root directory of the project.
+6. Add the API key to the .env file in the following format:
+
+```sh
+  VITE_CATS_API_KEY=your_api_key_here
+```
+
 
 <br/>
 
