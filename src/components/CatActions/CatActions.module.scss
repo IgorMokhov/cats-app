@@ -1,0 +1,15 @@
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  & input {
+    margin-right: 5px;
+  }
+
+  & button {
+    padding: 10px;
+    cursor: pointer;
+  }
+}
