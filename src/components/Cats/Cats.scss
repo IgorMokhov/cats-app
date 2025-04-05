@@ -4,4 +4,14 @@
   border-radius: 12px;
   width: 740px;
 
+  &_loading,
+  &_error {
+    font-size: 20px;
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  &_error {
+    color: tomato;
+  }
 }
