@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ICat } from '../../types/cats';
 import { CatActions } from '../CatActions/CatActions';
 import { fetchCat } from '../../api/config';
@@ -27,11 +27,26 @@ export const Cats = () => {
     }
   };
 
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval> | null = null;
+
+    if (isAutoRefresh && isEnabled) {
+      interval = setInterval(() => {
+        getCatHandler();
+      }, 5000);
+    }
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [isAutoRefresh, isEnabled]);
+
   return (
     <section className="cats">
       <CatActions
         isEnabled={isEnabled}
         isAutoRefresh={isAutoRefresh}
+        isLoading={isLoading}
         setIsEnabled={setIsEnabled}
         setIsAutoRefresh={setIsAutoRefresh}
         getCatHandler={getCatHandler}

@@ -4,6 +4,11 @@
   gap: 10px;
   margin-bottom: 20px;
 
+  & label,
+  & input {
+    cursor: pointer;
+  }
+
   & input {
     margin-right: 5px;
   }
