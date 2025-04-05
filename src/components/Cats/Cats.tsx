@@ -41,6 +41,10 @@ export const Cats = () => {
     };
   }, [isAutoRefresh, isEnabled]);
 
+  useEffect(() => {
+    getCatHandler();
+  }, []);
+
   return (
     <section className="cats">
       <CatActions
